@@ -29,6 +29,26 @@ a:hover{color:oklch(0 0 0);border-bottom-color:currentColor;}
 @keyframes rise{0%{opacity:0;transform:translateY(22px)}100%{opacity:1;transform:none}}
 @keyframes caret{0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes scan{0%{transform:translateY(-100%)}100%{transform:translateY(1400%)}}
+.skill-key { width: 150px; height: 150px; }
+.skill-key-wide { width: 300px; height: 150px; }
+@media (max-width: 900px) {
+  body { zoom: 0.8; }
+  .skill-key { width: 100px !important; height: 100px !important; }
+  .skill-key-wide { width: 200px !important; height: 100px !important; }
+}
+@media (max-width: 600px) {
+  body { zoom: 0.6; }
+  .skill-key { width: 70px !important; height: 70px !important; }
+  .skill-key-wide { width: 140px !important; height: 70px !important; }
+  .skill-key img, .skill-key svg, .skill-key-wide img, .skill-key-wide svg { width: 28px !important; height: 28px !important; }
+}
+@media (max-width: 400px) {
+  body { zoom: 0.5; }
+  .skill-key { width: 55px !important; height: 55px !important; }
+  .skill-key-wide { width: 110px !important; height: 55px !important; }
+  .skill-key img, .skill-key svg, .skill-key-wide img, .skill-key-wide svg { width: 22px !important; height: 22px !important; }
+  .skill-key span, .skill-key-wide span { display: none !important; }
+}
 </style>
 </helmet>
 
@@ -159,43 +179,43 @@ a:hover{color:oklch(0 0 0);border-bottom-color:currentColor;}
           <div style="display:flex;flex-direction:column;gap:16px;transform:rotateX(12deg);transform-style:preserve-3d;">
 
             <div style="display:flex;gap:16px;justify-content:center;">
-              <div data-key="JavaScript" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="JavaScript" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/javascript/1A1A1A" alt="JavaScript" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="PHP" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="PHP" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/php/1A1A1A" alt="PHP" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="Python" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="Python" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/python/1A1A1A" alt="Python" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="Java" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="Java" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/openjdk/1A1A1A" alt="Java" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="C" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="C" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/c/1A1A1A" alt="C" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="C#" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="C#" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <svg width="56" height="56" viewBox="0 0 24 24" fill="#1A1A1A"><path d="M12 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0zM9.426 7.12a5.55 5.55 0 011.985.38v1.181a4.5 4.5 0 00-2.25-.566 3.439 3.439 0 00-2.625 1.087 4.099 4.099 0 00-1.012 2.906 3.9 3.9 0 00.945 2.754 3.217 3.217 0 002.482 1.023 4.657 4.657 0 002.464-.634l-.004 1.08a5.543 5.543 0 01-2.625.555 4.211 4.211 0 01-3.228-1.297 4.793 4.793 0 01-1.212-3.409 5.021 5.021 0 011.365-3.663 4.631 4.631 0 013.473-1.392c.074-.003.166-.005.242-.005zm5.863 2.47l.003.006h1.542l-.005 1.32h-1.54v1.32h1.54l.003 1.32h-1.54v1.336h-1.32v-1.34h-1.54v-1.32h1.54V10.92h-1.54V9.593h1.54v-1.32h1.32z"/></svg>
                 </div>
               </div>
-              <div data-key=".NET" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key=".NET" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/dotnet/1A1A1A" alt=".NET" width="56" height="56" style="display:block;" />
@@ -204,37 +224,37 @@ a:hover{color:oklch(0 0 0);border-bottom-color:currentColor;}
             </div>
 
             <div style="display:flex;gap:16px;justify-content:center;">
-              <div data-key="HTML5" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="HTML5" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/html5/1A1A1A" alt="HTML5" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="CSS" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="CSS" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/css/1A1A1A" alt="CSS" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="MySQL" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="MySQL" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/mysql/1A1A1A" alt="MySQL" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="MariaDB" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="MariaDB" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/mariadb/1A1A1A" alt="MariaDB" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="Bootstrap" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="Bootstrap" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/bootstrap/1A1A1A" alt="Bootstrap" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="Git" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="Git" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/git/1A1A1A" alt="Git" width="56" height="56" style="display:block;" />
@@ -243,20 +263,20 @@ a:hover{color:oklch(0 0 0);border-bottom-color:currentColor;}
             </div>
 
             <div style="display:flex;gap:16px;justify-content:center;">
-              <div data-key="React Native" style="position:relative;width:150px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="React Native" class="skill-key" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;">
                   <img src="https://cdn.simpleicons.org/react/1A1A1A" alt="React Native" width="56" height="56" style="display:block;" />
                 </div>
               </div>
-              <div data-key="Cisco CCNA" style="position:relative;width:300px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="Cisco CCNA" class="skill-key skill-key-wide" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;gap:12px;">
                   <img src="https://cdn.simpleicons.org/cisco/1A1A1A" alt="Cisco CCNA" width="56" height="56" style="display:block;" />
                   <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.2em;color:var(--dim);">CCNA</span>
                 </div>
               </div>
-              <div data-key="Microsoft Office" style="position:relative;width:300px;height:150px;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
+              <div data-key="Microsoft Office" class="skill-key skill-key-wide" style="position:relative;cursor:default;transition:transform 0.13s cubic-bezier(0.4,0,0.2,1);">
                 <div style="position:absolute;inset:0;border-radius:11px;background:linear-gradient(180deg, oklch(0.9 0 0), oklch(0.78 0 0));box-shadow:0 10px 0 -1px oklch(0.7 0 0), 0 16px 22px -10px oklch(0 0 0 / 0.35);"></div>
                 <div style="position:absolute;left:6px;right:6px;top:5px;bottom:13px;border-radius:8px;background:linear-gradient(170deg, oklch(1 0 0), oklch(0.94 0 0));box-shadow:inset 0 1px 0 oklch(1 0 0), inset 0 -3px 6px oklch(0 0 0 / 0.12);display:flex;align-items:center;justify-content:center;gap:12px;">
                   <svg width="56" height="56" viewBox="0 0 24 24" fill="#1A1A1A"><path d="M21.53 4.306v15.363q0 .807-.472 1.433-.472.627-1.253.85l-6.888 1.974q-.136.037-.29.055-.156.019-.293.019-.396 0-.72-.105-.321-.106-.656-.292l-4.505-2.544q-.248-.137-.391-.366-.143-.23-.143-.515 0-.434.304-.738.304-.305.739-.305h5.831V4.964l-4.38 1.563q-.533.187-.856.658-.322.472-.322 1.03v8.078q0 .496-.248.912-.25.416-.683.651l-2.072 1.13q-.286.148-.571.148-.497 0-.844-.347-.348-.347-.348-.844V6.563q0-.62.33-1.19.328-.571.874-.881L11.07.285q.248-.136.534-.21.285-.075.57-.075.211 0 .39.031.18.031.378.093l7.71 2.2q.791.227 1.265.855.473.627.473 1.127z"/></svg>
