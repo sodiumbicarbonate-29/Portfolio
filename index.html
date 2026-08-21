@@ -681,7 +681,7 @@ class Component extends DCLogic {
     let x = 0, y = 0, drag = false, gx = 0, gy = 0;
     let vx = 0, vy = 0, angle = 0, angularVel = 0;
     let homeX = 0, homeY = 0;
-    const SPRING = 0.005, FRICTION = 0.982, SWING_DAMPING = 0.992, SWING_FACTOR = 0.15;
+    const SPRING = 0.005, FRICTION = 0.982, SWING_DAMPING = 0.92, SWING_FACTOR = 0.08;
 
     const anchor = () => {
       const lr = layer.getBoundingClientRect(), sr = slot.getBoundingClientRect();
@@ -718,10 +718,9 @@ class Component extends DCLogic {
         vy *= FRICTION;
         x += vx;
         y += vy;
-        angularVel += vx * SWING_FACTOR;
         angularVel *= SWING_DAMPING;
         angle += angularVel;
-        angle *= 0.96;
+        angle *= 0.92;
         angle = Math.max(-35, Math.min(35, angle));
       }
       draw();
@@ -769,7 +768,7 @@ class Component extends DCLogic {
       if (!drag) return;
       drag = false;
       badge.style.cursor = 'grab';
-      angularVel = vx * 1.2;
+      angularVel = vx * 0.8;
     };
     window.addEventListener('pointermove', move);
     window.addEventListener('pointerup', up);
